@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result - Forest Fire Size</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Prediction Result</h1>
+
+    <div class="result result-{{ risk_color }}">
+    <h2>Predicted Fire Size Class: <span>{{ fire_class }}</span></h2>
+    <h3>Severity Level: <span>{{ severity }}</span></h3>
+    <h3>Risk Band: <span>{{ risk_band }}</span></h3>
+    <p class="risk-message">{{ risk_message }}</p>
+</div>
+
+    <div class="back-link">
+        <a href="{{ url_for('index') }}">&#8592; Back to input form</a>
+    </div>
+</div>
+</body>
+</html>
